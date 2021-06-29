@@ -1,0 +1,27 @@
+<header class="header-design">
+  <h3>Weather Update</h3>
+</header>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">City Name</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Sunrise</th>
+        <th scope="col">Sunset</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="cityWeatherDetail(city.name)" *ngFor="let city of cityTempList; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ city.name }}</td>
+        <td>{{ city.temp }}</td>
+        <td>{{ city.sunrise }}</td>
+        <td>{{ city.sunset }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

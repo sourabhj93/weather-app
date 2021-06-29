@@ -1,0 +1,23 @@
+<div *ngIf="weatherForecastArray.length > 0" class="container mt-2">
+  <h3 class="forecast-header">{{ city }} Weather forecast for 5 day</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col-sm-4">#</th>
+        <th scope="col-sm-4">Temperature</th>
+        <th scope="col-sm-4">Sea level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of weatherForecastArray; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td scope="col-sm-4">
+          <span>{{ forecast.temp }}</span> 
+          <!-- <img src="{{ forecast.imgsrc }}" /> -->
+        </td>
+        <td scope="col-sm-4">{{ forecast.seaLevel }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
