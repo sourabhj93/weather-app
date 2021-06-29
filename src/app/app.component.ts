@@ -34,12 +34,12 @@ export class AppComponent implements OnInit {
 
   sunriseTime(time) {
     var date = new Date(time*1000); // Milliseconds to date
-    return date.getHours()+":"+date.getMinutes();
+    return date.getHours()+":"+date.getMinutes().toString().padEnd(2, '0');
   }
 
   sunsetTime(time) {
     var date = new Date(time*1000); // Milliseconds to date
-    return date.getHours()+":"+date.getMinutes();
+    return date.getHours()+":"+date.getMinutes().toString().padEnd(2, '0');
   }
 
   cityWeatherDetail(name) {
